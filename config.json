@@ -5,8 +5,8 @@
     "difficulty_sampler_config": {
         "difficulty_ranges": {
             "satisfiability": [
-                0.02,
-                0.07
+                0.01,
+                0.08
             ],
             "vehicle_routing": [
                 0.02,
@@ -34,11 +34,11 @@
         "time_between_retries": 60000
     },
     "precommit_manager_config": {
-        "max_pending_benchmarks": 0,
+        "max_pending_benchmarks": 4,
         "algo_selection": {
             "satisfiability": {
                 "algorithm": "sat_global_opt",
-                "num_nonces": 11900,
+                "num_nonces": 11904,
                 "weight": 1.0,
                 "base_fee_limit": "10000000000000001"
             },
@@ -63,7 +63,7 @@
         }
     },
     "slave_manager_config": {
-        "port": 5116,
+        "port": 5117,
         "time_before_batch_retry": 60000,
         "slaves": [
             {
