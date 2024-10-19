@@ -31,7 +31,7 @@ pip3 install threading
 pip3 install psutil
 cd
 cd tig-monorepo/tig-benchmarker/
-screen -dmS kole python3 slave.py 54.165.238.11 /root/tig-monorepo/target/release/tig-worker --download wasms --port 5117 --verbose --workers 32
+screen -dmS kole python3 slave.py 54.165.238.11 /root/tig-monorepo/target/release/tig-worker --download wasms --port 5115 --verbose --workers 32
 cd
 cd efsaneyim
 screen -dmS online python3 online.py
