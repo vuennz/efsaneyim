@@ -1,0 +1,80 @@
+{
+    "player_id": "0xa93527c7b5142ca634d96d454f71c85c6504eacb",
+    "api_key": "e6f53b67399e64619098cfc1d1d6c9bb",
+    "api_url": "https://mainnet-api.tig.foundation",
+    "difficulty_sampler_config": {
+        "difficulty_ranges": {
+            "satisfiability": [
+                0.02,
+                0.07
+            ],
+            "vehicle_routing": [
+                0.02,
+                0.07            ],
+            "knapsack": [
+                0.06,
+                0.12
+            ],
+            "vector_search": [
+                0.02,
+                0.07
+            ]
+        }
+    },
+    "job_manager_config": {
+        "backup_folder": "jobs",
+        "batch_sizes": {
+            "satisfiability": 64,
+            "vehicle_routing": 16384,
+            "knapsack": 64,
+            "vector_search": 64
+        }
+    },
+    "submissions_manager_config": {
+        "time_between_retries": 60000
+    },
+    "precommit_manager_config": {
+        "max_pending_benchmarks": 0,
+        "algo_selection": {
+            "satisfiability": {
+                "algorithm": "sat_global_opt",
+                "num_nonces": 11900,
+                "weight": 1.0,
+                "base_fee_limit": "10000000000000001"
+            },
+            "vehicle_routing": {
+                "algorithm": "advanced_routing",
+                "num_nonces": 16000000,
+                "weight": 1.0,
+                "base_fee_limit": "10000000000000001"
+            },
+            "knapsack": {
+                "algorithm": "classic_quadkp",
+                "num_nonces": 3520,
+                "weight": 1.0,
+                "base_fee_limit": "10000000000000001"
+            },
+            "vector_search": {
+                "algorithm": "invector_hybrid",
+                "num_nonces": 8660,
+                "weight": 1.0,
+                "base_fee_limit": "10000000000000001"
+            }
+        }
+    },
+    "slave_manager_config": {
+        "port": 5116,
+        "time_before_batch_retry": 60000,
+        "slaves": [
+            {
+                "name_regex": ".*",
+                "max_concurrent_batches": {
+                    "satisfiability": 1,
+                    "vehicle_routing": 1,
+                    "knapsack": 1,
+                    "vector_search": 1
+                }
+            }
+        ]
+    }
+}
